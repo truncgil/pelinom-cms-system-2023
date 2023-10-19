@@ -1,0 +1,49 @@
+.table-sm td, .table-sm th {
+    padding: 2px;
+    text-align: center;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+}
+
+.table-sm input, .table-sm select, .table-sm .select2-selection {
+    padding: 0px 10px;
+    height:30px;
+    border:none;
+    background: transparent;
+}
+.table-sm .select2 {
+    min-width:200px;
+}
+.table-sm td {
+    min-width:10%;
+}
+.sidebar-inverse #sidebar img {
+    filter: invert(1);
+}
+.table-sm td:hover{
+    /*min-width: 200px;*/
+    overflow:none !important;
+}
+.rc-handle:hover {
+    background: #e0e0e0;
+    width: 5px;
+    margin-left: -2px;
+}
+.table-responsive {
+    min-height:500px
+}
+.table-sm .dropdown-item input {
+    height:initial;
+}
+.table-sm .dropdown-item {
+    font-size: 11px;
+    padding:3px
+}
+.table-sm .dropdown-toggle {
+    background: none;
+}
+.table-sm .dropdown-menu {
+    max-height: 200px;
+    overflow: auto;
+}
