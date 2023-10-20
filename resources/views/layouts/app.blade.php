@@ -97,35 +97,40 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-12">
                     <div class="footer-logo-col">
-                        <a href="#"><img src="template/assets/images/footer/Logo.svg"></a>
-                        <p class="blue-light mb-0 fs-7 fw-500">Rakon is a simple, elegant, and secure way to build your bitcoin and crypto portfolio.</p>
+                        <a href="#"><img class="img-fluid" width="256" src="{{url(setting("footer-logo"))}}"></a>
+                        <p class="blue-light mb-0 fs-7 fw-500">{{setting("footer-description")}}</p>
                         <div class="callus text-white fw-500 fs-7">
-                            1989 Don Jackson Lane
-                            <div class="blue-light">Call us: <a href="#" class="text-warning fw-500 fs-7 text-decoration-none">808-956-9599</a></div>
+                            {{setting("address")}}
+                            <div class="blue-light">{{e2("Telefon edin")}}: 
+                                <a href="tel:{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none">{{setting("phone")}}</a>
+                                <a href="https://wa.me/{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none"><i class="fa fa-whatsapp"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-                    <h5 class="text-white">Social</h5>
+                    <h5 class="text-white">{{e2("Sosyal Medya")}}</h5>
                     <ul class="list-unstyled mb-0 pl-0">
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="{{setting("facebook")}}">Facebook</a></li>
+                        <li><a href="{{setting("twitter")}}">Twitter</a></li>
+                        <li><a href="{{setting("instagram")}}">Instagram</a></li>
+                        <li><a href="{{setting("linkedin")}}">Linkedin</a></li>
                     </ul>
                 </div>
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-                    <h5 class="text-white">Company</h5>
+                    <h5 class="text-white">{{e2("Linkler")}}</h5>
                     <ul class="list-unstyled mb-0 pl-0">
-                        <li><a href="#" >About</a></li>
-                        <li><a href="#">Affiliates</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Legal & Privacy</a></li>
+                        <?php foreach(contents("linkler") AS $link)  { 
+                         ?>
+                         <li><a href="{{$link->slug}}" >{{e2($link->title)}}</a></li> 
+                         <?php } ?>
+                       
                     </ul>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="d-none col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="subscribe">
                         <h5 class="text-white">Subscribe</h5>
                         <p class="blue-light fw-500">Subscribe to get the latest news form us
@@ -137,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">2023</span> - All Rights Reserved by <a href="https://adminmart.com/" class="blue-light text-decoration-none">adminmart.com</a> Dsitributed By <a href="https://themewagon.com" class="blue-light text-decoration-none">ThemeWagon</a></div>
+            <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">{{date("Y")}}</span> - {{e2("Her hakkı saklıdır ")}}Created By <a target="_blank" href="https://truncgil.com.tr" class="blue-light text-decoration-none">Trunçgil Teknoloji</a></div>
         </div>
     </footer>
     <!------------------------------>
