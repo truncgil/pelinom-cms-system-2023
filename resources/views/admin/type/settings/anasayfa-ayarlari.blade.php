@@ -46,6 +46,17 @@ if(getisset("update")) {
 <form action="?t={{get("t")}}&update" method="post">
     @csrf
    
-     
+    <?php $settings = [
+        'hizmetlerimiz-small',
+        'hizmetlerimiz-big',
+    ];
+    foreach($settings AS $setting) {
+         ?>
+         {{e2($setting)}}:
+         <input type="text" name="{{$setting}}" value="{{setting($setting)}}" id="" class="form-control">
+         
+         <?php 
+    }
+    ?>
     <button class="btn btn-primary mt-5">{{e2("Update")}}</button>
 </form>
