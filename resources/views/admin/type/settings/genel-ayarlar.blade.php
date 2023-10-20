@@ -46,6 +46,37 @@ if(getisset("update")) {
 
     </form>
   {{_col()}}
+  {{col("col-12","Footer Logo")}} 
+    <form action="?t=genel-ayarlar&footer-logo-update" enctype="multipart/form-data" method="post">
+        @csrf
+        <?php if(getisset("footer-logo-update")) {
+                $logo = upload("footer-logo");
+                firstOrUpdate(
+                    ["title"=> 'footer-logo', "html" => $logo],
+                    "settings",
+                    [
+                    "title"=> 'footer-logo'
+                ]);
+                
+                bilgi("footer logo Güncellendi");
+            } ?>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input type="file" name="footer-logo" id="" class="form-control">
+                        <button class="btn btn-primary">{{e2("Güncelle")}}</button>
+                    </div>
+                </div>      
+                <div class="col-md-4">
+                    <img src="{{url(setting("footer-logo"))}}" style="background:gray;width:128px;padding:10px" class="img-fluid" alt="">
+                </div>
+                
+            </div>
+             
+        
+
+    </form>
+  {{_col()}}
   {{col("col-12","Logo")}} 
     <form action="?t=genel-ayarlar&logo-update" enctype="multipart/form-data" method="post">
         @csrf
@@ -97,6 +128,7 @@ if(getisset("update")) {
         'Youtube',
         'Linkedin',
         'Whatsapp',
+        'Footer Description',
     ];
     foreach($settings AS $setting)  { 
      $key = str_slug($setting);
