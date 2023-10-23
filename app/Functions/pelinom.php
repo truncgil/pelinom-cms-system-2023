@@ -1325,7 +1325,7 @@ function oturumisset($isim)
 function oturumAc($sonuc = "")
 {
     if (!isset($_SESSION)) {
-        session_start();
+        @session_start();
         echo $sonuc;
     }
 }
