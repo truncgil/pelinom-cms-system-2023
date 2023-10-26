@@ -21,6 +21,13 @@
             </div>
         </div>
     </section>
+    <style>
+        .hero-banner::after {
+
+    background-image: url({{url(setting("header-bg"))}});
+   
+}
+    </style>
     <!------------------------------>
     <!--- Hero Banner End--------->
     <!------------------------------>

@@ -2,7 +2,7 @@
    oturum("locale",get("lang"));
       App::setLocale(get("lang"));
      // yonlendir("/");
-   exit();
+   //exit();
    } ?>
 <!DOCTYPE html>
 <html lang="{{App::getLocale()}}">
@@ -28,7 +28,9 @@
                     <a class="d-inline-block d-lg-block d-xl-none d-xxl-none  nav-toggler text-decoration-none"  data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">
                         <i class="ti ti-menu-2 text-warning"></i>
                     </a>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">                                             
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: #f9f9fb;
+    padding: 10px;
+    border-radius: 23px;">                                             
                             <ul class="navbar-nav me-auto">
                                 <?php $menu = contents("menu");
                                 foreach($menu AS $m)  { 
@@ -45,7 +47,20 @@
                                     <button class="btn border-0 p-0" type="button" id="button-addon1"><i class="ti ti-search text-white"></i></button>
                                     <input type="text" class="form-control border-0 bg-transparent ps-2" placeholder="search" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                 </div>
-                                <a class="btn btn-warning btn-hover-secondery text-capitalize " href="#">register</a>
+                               
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{e2(App::getLocale())}}
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <?php foreach(languages() AS $lang)  { 
+                                          ?>
+                                         <li><a class="dropdown-item" href="?lang={{$lang}}">{{e2($lang)}}</a></li> 
+                                         <?php } ?>
+                                       
+                                    </ul>
+                                    </div>
+                                
                             </div>
                     </div>
                 </nav>
@@ -63,22 +78,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="#">Pricing </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="#">Elements </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="#">blog </a>
-                        </li>
+                        <?php $menu = contents("menu");
+                                foreach($menu AS $m)  { 
+                                 
+                                 ?>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-capitalize" aria-current="page" href="{{($m->slug)}}">{{e2($m->title)}}</a>
+                                 </li> 
+                                 <?php } ?>
+                       
                         </ul>
-                        <div class="login d-block align-items-center mt-3">
-                            <a class="btn btn-warning text-capitalize w-100" href="#">contact us</a>
-                        </div>
+                       
                 </div>
             </div>
     </header>

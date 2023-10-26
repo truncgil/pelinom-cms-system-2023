@@ -2,3 +2,4 @@
 .env
 .htaccess
 storage/
+error_log
