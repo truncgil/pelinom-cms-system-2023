@@ -43,7 +43,7 @@
                                
                             </ul>
                             <div class="d-flex align-items-center">
-                                <div class="input-group  search">
+                                <div class="input-group  search d-none">
                                     <button class="btn border-0 p-0" type="button" id="button-addon1"><i class="ti ti-search text-white"></i></button>
                                     <input type="text" class="form-control border-0 bg-transparent ps-2" placeholder="search" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                 </div>
