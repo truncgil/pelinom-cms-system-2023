@@ -42,8 +42,24 @@ if(getisset("update")) {
      $key = str_slug($setting);
      ?>
         {{e2($setting)}}: 
+        
+           
         <input type="text" name="{{$key}}" value="{{setting($key)}}" class="form-control" id=""> 
      <?php } ?>
+     <?php $colors = [
+            'main_color_rgb',
+            'link_color',
+            'link_light_color',
+            'btn_primary',
+            'btn_secondary',
+            'footer_background',
+            ] ?>
+     <?php foreach($colors AS $color) { ?>
+         {{e2($color)}}: 
+         <input type="color" name="{{$color}}" value="{{setting($color)}}" class="form-control" id=""> 
+      <?php } ?>
+     {{e2("Custom Style")}}:
+     <textarea name="custom_style" id="" cols="30" rows="10" class="form-control"><?php echo setting('custom_style'); ?></textarea>
      {{e2("Çalışma Saatleri")}}
      <textarea name="working-hours" id="editor" cols="30" rows="10">{{setting("working-hours")}}</textarea>
     <button class="btn btn-primary mt-5">{{e2("Update")}}</button>

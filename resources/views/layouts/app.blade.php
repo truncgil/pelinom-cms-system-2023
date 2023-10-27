@@ -14,6 +14,33 @@
     <link rel="stylesheet" href="template/assets/libs/OwlCarousel-2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="template/dist/css/iconfont/tabler-icons.css">
     <link rel="stylesheet" href="template/dist/css/style.css">
+    <style>
+        .bg-primary {
+            background-color: {{setting('main_color_rgb')}} !important;
+        }
+        .btn-primary {
+            background-color: {{setting('btn_primary')}} !important;
+            border-color: {{setting('btn_primary')}}  !important;
+        }
+        .btn-secondary {
+            background-color: {{setting('btn_secondary')}} !important;
+            border-color: {{setting('btn_secondary')}}  !important;
+        }
+        a {
+            color: {{setting('link_color')}};
+            text-decoration: none;
+        }
+        .footer {
+            padding: 170px 0 100px;
+            background-color: {{setting('footer_background')}};
+        }
+        .blue-light, .footer ul li a {
+            color: {{setting('link_light_color')}} !important;
+        }
+    </style>
+    <style>
+        <?php echo setting('custom_style') ?>
+    </style>
 </head>
 <body>
     <!------------------------------>
