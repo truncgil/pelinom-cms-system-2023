@@ -37,6 +37,7 @@ if(getisset("update")) {
         'Whatsapp',
         'Footer Description',
         'map_iframe',
+        'admin_mail',
     ];
     foreach($settings AS $setting)  { 
      $key = str_slug($setting);

@@ -27,6 +27,7 @@ if(getisset("update")) {
             
             bilgi("Hero Güncellendi");
         } ?>
+        <h2>HERO</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="input-group">

@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="position-relative right-hero-color">
-                        <img src="template/assets/images/hero/right-image.svg" class="img-fluid"> 
+                        <img src="{{url(setting("hero"))}}" class="img-fluid"> 
                     </div>          
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="row d-flex flex-wrap justify-content-center step-row">
-                <?php $servisler = contents("hizmetlerimiz", 0, 3);
+                <?php $servisler = contents("Hizmetlerimiz", 0, 3);
                 foreach($servisler AS $servis)  { 
                  
                  ?>
@@ -56,7 +56,7 @@
                             <a href="{{$servis->slug}}">
                              <img src="{{picture2($servis->cover, 256)}}" width="256" alt="">
                              <h3 class="fs-4">{{e2($servis->title)}}</h3>
-                             <p class="fs-7 mb-0 fw-500">{{e2(short_text($servis->html,50))}}</p>
+                             <p class="fs-7 mb-0 fw-500"><?php e2(short_text($servis->html,100)) ?></p>
                              </a>
                          </div>
                      </div>
@@ -73,7 +73,7 @@
     <!---------------------------------->
     <!--- Our Service sectin Start------>
     <!---------------------------------->
-    <section class="our-service position-relative overflow-hidden">
+    <section class="our-service position-relative overflow-hidden d-none">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-8 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -152,7 +152,7 @@
                     foreach($gorseller AS $gorsel)  { 
                      
                      ?>
-                         <div class="item"><a href="{{$gorsel->slug}}"  target='_blank'><img style='width:auto;max-height:800px;' src="{{picture2($gorsel->cover, 256)}}" ></a></div>
+                         <div class="item"><a href="{{$gorsel->slug}}"  target='_blank'><img class="img-fluid" src="{{picture2($gorsel->cover, 512)}}" ></a></div>
                        
                      <?php } ?>
                 </div>
@@ -361,26 +361,35 @@
                     </div>                        
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                    <form class="position-relative">
+                    <?php if(getisset("add")) {
+                        mailSend(setting("admin-mail"), "Siteden Mesajınız Var", "
+                        Adı: {$_POST['name']}, <br>
+                        E-Posta: {$_POST['email']} <br>
+                        Mesaj: {$_POST['message']}
+                        ");
+                        bilgi("Mesaj gönderilmiştir.");
+                    } ?>
+                    <form class="position-relative" action="?add" method="POST">
+                        @csrf
                         <div class="row ps-xxl-5 ps-xl-5 ps-lg-3 ps-md-0 ps-sm-0 ps-0">
                             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">{{e2("Adı Soyadı")}}</label>
-                                    <input type="text" class="form-control border-0" placeholder="Enter your name">
+                                    <input type="text" name="name" class="form-control border-0" placeholder="Enter your name">
                                 </div>
                             </div>
                             
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">{{e2("E-Posta Adresi")}}</label>
-                                    <input type="email" class="form-control border-0" placeholder="Enter your email address">
+                                    <input type="email" name="email" class="form-control border-0" placeholder="Enter your email address">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">{{e2("Mesajınız")}}</label>
-                                    <textarea name="" id="" cols="30" rows="10" class="form-control border-0"></textarea>
+                                    <textarea name="message" id="" cols="30" rows="10" class="form-control border-0"></textarea>
                                 </div>
                             </div>
                       
