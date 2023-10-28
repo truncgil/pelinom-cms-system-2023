@@ -7,7 +7,7 @@ if(getisset("cache")) {
 	}
 	$content = json_encode_tr($dizi);
 	//dump($dizi);
-	@mkdir("resources/lang/", true);
+	@mkdir("resources/lang/$id.json", true);
 	file_put_contents("resources/lang/$id.json",$content);
 	exit();						
 }
