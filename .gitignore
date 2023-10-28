@@ -3,3 +3,4 @@
 .htaccess
 storage/
 error_log
+resources/lang/
