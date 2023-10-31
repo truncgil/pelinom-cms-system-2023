@@ -4,8 +4,14 @@
         if($strip_tags) {
             $setting->html = strip_tags($setting->html);
         }
+
+        if(is_null($setting->html)) {
+            return ""; 
+        } else {
+            return $setting->html;
+        }
     
-        return $setting->html;
+        
     } else {
         return $key . " Not found";
     }
