@@ -48,7 +48,7 @@ $j = j($c->json);
 						 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">
 							<div class="card border-0 shadow">
 								<div class="card-body">
-									<a href="hizmetlerimiz-hizmet-4">
+									<a href="{{$a->slug}}">
 									<img src="{{picture2($a->cover,256)}}" width="256" alt="">
 									<h3 class="fs-4">{{e2($a->title)}}</h3>
 										<p class="fs-7 mb-0 fw-500">{{short_text(strip_tags($a->html), 100)}}</p>
