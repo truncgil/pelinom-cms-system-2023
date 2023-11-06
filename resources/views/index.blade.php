@@ -99,6 +99,13 @@
             </div>
         </div>
     </section> 
+    <section>
+        
+        <div class="container text-center  mb-5">
+            <h2>{{e2("Tanıtım Videosu")}}</h2>
+            <?php echo setting("video_iframe") ?>
+        </div>
+    </section>
     <!------------------------------>
     <!--- Our Service sectin End---->
     <!------------------------------>
@@ -106,7 +113,7 @@
     <!------------------------------>
     <!-- Portfolio section Start---->
     <!------------------------------>
-    <section class="portfolio position-relative bg-primary">
+    <section class="portfolio position-relative bg-primary d-none">
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12 d-none"><small class="fs-7 d-block text-warning">Product Docs</small></div>

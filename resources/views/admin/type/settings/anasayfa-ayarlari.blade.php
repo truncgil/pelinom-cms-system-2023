@@ -50,6 +50,7 @@ if(getisset("update")) {
     <?php $settings = [
         'hizmetlerimiz-small',
         'hizmetlerimiz-big',
+        'video_iframe',
     ];
     foreach($settings AS $setting) {
          ?>
