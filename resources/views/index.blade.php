@@ -35,6 +35,15 @@
     <!------------------------------>
     <!--- Service sectin Start------>
     <!------------------------------>
+    <section class="main mt-5">
+        <div class="container">
+            <div class="text-center">
+                <img src="assets/1.png" alt="">
+                <img src="assets/2.png" alt="">
+                <img src="assets/3.png" alt="">
+            </div>
+        </div>
+    </section>
     <section class="service position-relative overflow-hidden">
         <div class="container position-relative">
             <img src="template/assets/images/service/dot-shape.png" class="shape position-absolute">
@@ -407,10 +416,10 @@
                     </form>
                 </div>
             </div>
-            <div class="trusted-companies">
+            <div class="trusted-companies d-none">
                 <div class="row justify-content-center">
                     <div class="col-xx-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-                        <h3 class="fs-7 mb-0 text-white text-center">Trusted by content creators across the world</h3>
+                        <h3 class="fs-7 mb-0 text-white text-center">Powered By</h3>
                         <ul class="d-flex flex-wrap align-items-center list-unstyled mb-0 pl-0 owl-carousel owl-theme trusted-logos">
                             <li class="text-center item"><a href="#"><img src="template/assets/images/contact/google.svg"></a></li>
                             <li class="text-center item"><a href="#"><img src="template/assets/images/contact/microsoft.svg"></a></li>
