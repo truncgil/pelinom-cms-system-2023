@@ -35,7 +35,7 @@
     <!------------------------------>
     <!--- Service sectin Start------>
     <!------------------------------>
-    <section class="main mt-5">
+    <section class="main mt-5 d-none">
         <div class="container">
             <div class="text-center">
                 <img src="assets/1.png" alt="">

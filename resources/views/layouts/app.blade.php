@@ -34,6 +34,9 @@
             padding: 170px 0 100px;
             background-color: {{setting('footer_background')}};
         }
+        
+
+   
         .blue-light, .footer ul li a {
             color: {{setting('link_light_color')}} !important;
         }
@@ -75,7 +78,7 @@
                                     <input type="text" class="form-control border-0 bg-transparent ps-2" placeholder="search" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                 </div>
                                
-                                <div class="dropdown">
+                                <div class="dropdown d-none">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         {{e2(App::getLocale())}}
                                     </button>
@@ -150,7 +153,6 @@
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
                     <h5 class="text-white">{{e2("Sosyal Medya")}}</h5>
                     <ul class="list-unstyled mb-0 pl-0">
-                        <li><a href="#">Blog</a></li>
                         <li><a href="{{setting("facebook")}}">Facebook</a></li>
                         <li><a href="{{setting("twitter")}}">Twitter</a></li>
                         <li><a href="{{setting("instagram")}}">Instagram</a></li>
@@ -179,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">{{date("Y")}}</span> - {{e2("Her hakkı saklıdır ")}}Created By <a target="_blank" href="https://truncgil.com.tr" class="blue-light text-decoration-none">Trunçgil Teknoloji</a></div>
+            <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">{{date("Y")}}</span> - {{e2("Her hakkı saklıdır ")}} Created By <a target="_blank" href="{{e2("https://truncgil.com.tr")}}" class="blue-light text-decoration-none">{{e2("Trunçgil Teknoloji")}}</a></div>
         </div>
     </footer>
     <!------------------------------>

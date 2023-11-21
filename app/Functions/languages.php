@@ -1,5 +1,5 @@
 <?php 
 function languages() {
-    $diller = explode(",","tr,en,ar");
+    $diller = explode(",","en");
     return $diller;
 }
