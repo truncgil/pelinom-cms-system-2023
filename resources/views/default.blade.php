@@ -35,10 +35,11 @@ $j = j($c->json);
                     <h1 class="fs-3 pricing-head text-black mb-0 position-relative">{{$c->title}}</h1>
                 </div>
 				<div class="col-12">
-					<div class="text-center mb-5 mt-5">
-						<img src="{{picture2($c->cover, 1024)}}" alt="">
+					<div class="text-left mb-5 mt-5">
+						
+						<?php e2($c->html) ?>
 					</div>
-					<?php e2($c->html) ?>
+					
 
 					<?php $alt = contents($c->slug);
 					if($alt) {

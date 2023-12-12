@@ -11,9 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{setting("title")}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="template/assets/libs/OwlCarousel-2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="template/dist/css/iconfont/tabler-icons.css">
     <link rel="stylesheet" href="template/dist/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .bg-primary {
             background-color: {{setting('main_color_rgb')}} !important;
@@ -30,6 +34,11 @@
             color: {{setting('link_color')}};
             text-decoration: none;
         }
+
+        body,h1,h2,h3,h4,h5,h6,h7,a,div,span {
+            font-family: 'Roboto', sans-serif !important;
+        }
+        
         .footer {
             padding: 170px 0 100px;
             background-color: {{setting('footer_background')}};
@@ -39,6 +48,10 @@
    
         .blue-light, .footer ul li a {
             color: {{setting('link_light_color')}} !important;
+        }
+
+        .pricing {
+            padding: 260px 0;
         }
     </style>
     <style>
@@ -62,6 +75,9 @@
     padding: 10px;
     border-radius: 23px;">                                             
                             <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                     <a class="nav-link text-capitalize" aria-current="page" href="./"><i class="fa fa-home"></i></a>
+                                 </li>
                                 <?php $menu = contents("menu");
                                 foreach($menu AS $m)  { 
                                  
@@ -144,8 +160,8 @@
                         <div class="callus text-white fw-500 fs-7">
                             {{setting("address")}}
                             <div class="blue-light">{{e2("Telefon edin")}}: 
-                                <a href="tel:{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none">{{setting("phone")}}</a>
-                                <a href="https://wa.me/{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none"><i class="fa fa-whatsapp"></i></a>
+                                <a href="mailto:{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none">{{setting("phone")}}</a>
+                                <a href="https://wa.me/{{setting("phone")}}" class="text-warning fw-500 fs-7 text-decoration-none"></a>
                             </div>
                         </div>
                     </div>
@@ -154,9 +170,12 @@
                     <h5 class="text-white">{{e2("Sosyal Medya")}}</h5>
                     <ul class="list-unstyled mb-0 pl-0">
                         <li><a href="{{setting("facebook")}}">Facebook</a></li>
-                        <li><a href="{{setting("twitter")}}">Twitter</a></li>
                         <li><a href="{{setting("instagram")}}">Instagram</a></li>
                         <li><a href="{{setting("linkedin")}}">Linkedin</a></li>
+                        <li><a href="{{setting("twitter")}}">Twitter</a></li>
+                        <li><a href="{{setting("youtube")}}">Youtube</a></li>
+                        
+                        
                     </ul>
                 </div>
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
@@ -181,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">{{date("Y")}}</span> - {{e2("Her hakkı saklıdır ")}} Created By <a target="_blank" href="{{e2("https://truncgil.com.tr")}}" class="blue-light text-decoration-none">{{e2("Trunçgil Teknoloji")}}</a></div>
+            <div class="copyrights text-center blue-light  fw-500">©<span id="autodate">{{date("Y")}}</span> - {{e2("Her hakkı saklıdır ")}} Created By <a target="_blank" href="{{e2("https://truncgil.com.tr")}}" class="blue-light text-decoration-none">{{e2("Trunçgil Teknoloji")}}</a></div>
         </div>
     </footer>
     <!------------------------------>

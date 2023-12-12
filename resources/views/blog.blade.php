@@ -5,7 +5,7 @@
         <div class="container position-relative">
             <img src="template/assets/images/service/dot-shape.png" class="shape position-absolute">
             <div class="row">
-                <div class="col-12 d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-sm-block d-block align-items-center justify-content-xxl-between justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-sm-center ">
+                <div class="col-12 " style="    margin-top: 100px;">
                     <h1 class="fs-2 text-black mb-0 text-center">Blog</h1>
                 </div>
             </div>

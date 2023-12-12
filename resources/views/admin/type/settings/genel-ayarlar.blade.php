@@ -31,7 +31,7 @@ if(getisset("update")) {
         'Phone',
         'Facebook',
         'Instagram',
-        'Telegram',
+        'Twitter',
         'Youtube',
         'Linkedin',
         'Whatsapp',

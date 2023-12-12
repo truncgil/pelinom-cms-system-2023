@@ -1,5 +1,5 @@
-<section class="inner-banner">
-        <div class="inner-text">
+<section class="inner-banner" >
+        <div class="inner-text" style="    margin-top: 100px;">
             <h1>{{e2($title)}}</h1>
             <nav aria-label="breadcrumb" class="sticky-header  d-none">
                 <ol class="breadcrumb">
