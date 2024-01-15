@@ -185,7 +185,15 @@
     <!------------------------------>
     <!-------Footer End------------->
     <!------------------------------>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8WCC37H15"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', '{{env('GOOGLE_ANALYTICS')}}');
+</script>
     
     <script src="template/dist/js/jquery.min.js"></script>
     <script src="template/dist/js/bootstrap.min.js"></script>
